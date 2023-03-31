@@ -12,9 +12,8 @@ for line in Lines:
             newString.append(name)
         if idx == 1:
             age = re.search(r'[0-9]+', elem)
-            print(elem, name.string)
             if age:
-                newString.append(age)
+                newString.append(elem)
             else:
                 newString.append('')
 
