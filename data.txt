@@ -1,4 +1,4 @@
-Horten Dugood|38|+351 327 863 0871|hdugood0@webnode.com
+HortenDugood|38|+351 327 863 0871|hdugood0@webnode.com
 Latisha Bendell|31|+1 815 317 4277|lbendell1@yahoo.com
 Daffie Jurges|43|+55 502 718 6189|djurges2@bigcartel.com
 Dulci Rutley|27|+98 814 733 2894|drutley3@usnews.com
@@ -997,4 +997,5 @@ Omar Brabon|64|+81 803 234 3345|obrabonrn@netlog.com
 Ives Tomczak|56|+82 148 408 9677|itomczakro@youtube.com
 Haley Thoresbie|57|+420 451 350 5477|hthoresbierp@cmu.edu
 Ignacio McPheat|23|+262 575 736 4323|imcpheatrq@csmonitor.com
-Agnes Stratiff|57|+355 261 158 6340|astratiffrr@chron.com
+AgnesStratiff|57|+355 261 158 6340|astratiffrr@chron.com
+-|57|+355 261 158 6340|astratiffrr@chron.com
