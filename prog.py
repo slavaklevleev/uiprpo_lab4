@@ -3,8 +3,15 @@ import re
 f = open("data.txt", "r")
 Lines = f.readlines()
 
-def phone_format(n):                                                                                                                                  
-    return (format(int(n[:-1]), ",").replace(",", "-") + n[-1]).replace("-", " (", 1).replace("-", ") ", 1)
+def check_phone(phone):
+    # убираем все символы, кроме цифр
+    phone = re.sub(r'\D', '', phone)
+    country_code = phone[0:len(phone) - 10]
+    # проверяем длину номера
+    if (len(phone) - len(country_code)) != 10:
+        return '-'
+    # форматируем номер телефона
+    return '+' + country_code + ' (' + phone[len(country_code):len(country_code) + 3] + ') ' + phone[len(country_code) + 3:len(country_code) + 6] + '-' + phone[len(country_code) + 6:len(country_code) + 8] + '-' + phone[len(country_code) + 8:]
 
 def check_email(email):
     email = email.replace(' ', '').replace('..', '.')
@@ -35,7 +42,7 @@ with open('output.txt', 'w') as f_out:
                 else:
                     newString.append('')
             if idx == 2:
-                phone = '+' + phone_format(elem.replace(' ', ''))
+                phone = check_phone(elem)
                 newString.append(phone)
             if idx == 3:
                 newString.append(check_email(elem))
