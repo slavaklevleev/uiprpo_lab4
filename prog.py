@@ -3,6 +3,15 @@ import re
 f = open("data.txt", "r")
 Lines = f.readlines()
 
+def check_age(age):
+    try:
+        age = int(age)
+        if age < 0 or age > 120:
+            return '-'
+        return str(age)
+    except ValueError:
+        return '-'
+    
 def check_phone(phone):
     # убираем все символы, кроме цифр
     phone = re.sub(r'\D', '', phone)
@@ -20,7 +29,7 @@ def check_email(email):
         email = re.sub(r'\.{2,}', '.', email)
         email = re.sub(r'@{2,}', '@', email)
         if not re.match(pattern, email):
-            return ''
+            return '-'
     username, domain = email.split('@')
     domain_parts = domain.split('.')
     if len(domain_parts) > 2:
@@ -36,14 +45,9 @@ with open('output.txt', 'w') as f_out:
                 name = re.sub(r'(?<=[a-z])([A-Z])', r' \1', elem).strip()
                 newString.append(name)
             if idx == 1:
-                age = re.search(r'[0-9]+', elem)
-                if age:
-                    newString.append(elem)
-                else:
-                    newString.append('')
+                newString.append(check_age(elem))
             if idx == 2:
-                phone = check_phone(elem)
-                newString.append(phone)
+                newString.append(check_phone(elem))
             if idx == 3:
                 newString.append(check_email(elem))
 
