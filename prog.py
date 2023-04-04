@@ -3,6 +3,9 @@ import re
 f = open("data.txt", "r")
 Lines = f.readlines()
 
+def phone_format(n):                                                                                                                                  
+    return (format(int(n[:-1]), ",").replace(",", "-") + n[-1]).replace("-", " (", 1).replace("-", ") ", 1)
+
 for line in Lines:
     arr = line.strip().split('|')
     for idx, elem in enumerate(arr):
@@ -16,9 +19,9 @@ for line in Lines:
                 newString.append(elem)
             else:
                 newString.append('')
-
-        # if idx == 2:
-            # print('Телефон')
+        if idx == 2:
+            phone = '+' + phone_format(elem.replace(' ', ''))
+            newString.append(phone)
         # if idx == 3:
             # print('Email')
 
