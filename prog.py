@@ -20,11 +20,11 @@ def check_email(email):
         domain = '.'.join(domain_parts[-2:])
     return f'{username}@{domain}'
 
+with open('output.txt', 'w') as f_out:
     for line in Lines:
         arr = line.strip().split('|')
         newString = []
         for idx, elem in enumerate(arr):
-        newString = []
             if idx == 0:
                 name = re.sub(r'(?<=[a-z])([A-Z])', r' \1', elem).strip()
                 newString.append(name)
@@ -40,4 +40,5 @@ def check_email(email):
             if idx == 3:
                 newString.append(check_email(elem))
 
-    # print(arr)
+    
+        f_out.write('|'.join(newString) + '\n')
