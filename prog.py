@@ -53,3 +53,7 @@ with open('output.txt', 'w') as f_out:
 
     
         f_out.write('|'.join(newString) + '\n')
+
+
+def test_check_age():
+    assert check_age(130) == "-"
