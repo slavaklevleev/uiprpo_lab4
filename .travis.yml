@@ -1,10 +1,9 @@
----
 language: python
 addons:
   sonarcloud:
-    organization: "slavaklevleev" # the key of the org you chose at step #3
+    organization: slavaklevleev
     token:
-      secure: "9a508e466c4954e8820d8b205132a0ae94ceb143" # encrypted value of your token
+      secure: "Ttr7uXiInC2txCyPqG72vTFsAnOUYCwmH6isbAUEyVcFrol+fJVbu2qgsu8qoJf83daNAQSWAYYb+TBzvGLL7YfJKd2dJWUfuAJASEj/4SbOcF9L/Y6L0HPyyTb8gWYtN86K8Qp1MvZYD2iBjNI3VW7AOg5wrY5f6pGuwAaPstRch0oFBInN91U52N8YDofgXuMo7l6qkCZg2oaHnkKfW3Gvt97Iuwd3YgxFlkD8gCek0LUH/8P+k/UWKtBNEArZmHgWs8yLjhbyThe/F21+3HHLA9a9Oymp/W1wTbKbeQbiwyFhRaLqD9Wk1mMvyP9VEvR/VjnSVY+A7KjL4tFGXnXX55mGaphYz8KRzZzyD9k6Q4nz3RA/C2XDa5KkF4IhfQwEPDHTLx4jifdlPRSrsMy2/LBy7e4rrHnGsw0CCUKL2LUdPlb5Trq0hq+YKrVsXU2o1ngA9vBGqrZiUh2L2fpDqGMCr97XQ2MgXBQJdVWsOlhr48zgDP65McIWAzqOe7pPKs6QqZcU1Do2j9iqKlOLTRakiZHAYeLQdrLVfUrVm4VXxfS8e67YAgxv5igivAmbxX3TfhdSh5WX8Qaq/wBGfS90AHmFPjklUzOqyXOnf7LFuHOtG1u7FGE6F7I5Vt4MOl80gmvE78V9NkXyDQhyNkzTwkw1B/kYhOvRC5Y="
 script:
-  - pytest
-  - sonar-scanner
+- pytest
+- sonar-scanner -X
