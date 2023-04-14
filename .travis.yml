@@ -1,4 +1,10 @@
 ---
 language: python
+addons:
+  sonarcloud:
+    organization: "slavaklevleev" # the key of the org you chose at step #3
+    token:
+      secure: 23fb3d0abe3d765113695ac629db362da7a514b9 # encrypted value of your token
 script:
   - pytest
+  - sonar-scanner
