@@ -6,6 +6,10 @@ addons:
     token:
       secure: "h0NOy8Fa+Apd9Gvc9JCW3BKft7rdpV0YXi98mYwk4JJS+rdwT24CZo6rgKDf/QP+Y+dSFQJQpX4/YluhiAXIafJommmA6NoGcxliX/gCzE1yH9XEVguA550DQbBdn8e9KxJK/X0eaQywP4b+g8YTsAnc7LMAqzey5mX3TSLnclm46ObqVoZ+5pf/bOgR4li2+r6Xv3w69qAztNIp9yefRnfK9O4y9qHKdWomGzcdmJ5hdmPSip9Nj8uLWJckTEPonaAv8MW4u2QHKMqzxYYW/OSaGbJKsKjt7+X1o6u9JNVyQ5q1RgBOc6PyGhgA7hyhGCL1wwjwS1Cl5Cx7K4O+ozE/QOiBecVppbulSU3AAg7DBilpGLRsj9tRbQFtSUygd2g+TSw5HouUrgJc9/0GXOHKCzcFzPsd1Duk8Hr9jRq7XMUX2l1vCPdCZEJQ+Hb5td4NfJ0VRDS3ObT9B8aajLG30wQ/EF9Y4cMGcEIdC2q2R7A/hyAgdNmH010RHSqKYy6wR0Q2WD6ott1IgwUue4kKVFqMx8wG+/BNXkCFggnoX50K33gp166lV0fzggxGGuN2SmqaygiPLD1jbxbuws2tHmzl7+PF1mR4yJPDdhDONh+921ZGYldJdcaBFk5D++TsIZn4/TS24W5MNyRfRnMliIb5LUBAqSWe2qybWvg="
 
+install:
+  - pip install coverage
+  - pip install tox
+
 script:
   - pytest
   - tox run
