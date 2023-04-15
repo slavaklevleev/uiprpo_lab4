@@ -8,4 +8,5 @@ addons:
 
 script:
   - pytest
+  - tox run
   - sonar-scanner
