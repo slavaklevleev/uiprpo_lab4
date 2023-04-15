@@ -27,7 +27,7 @@ def check_phone(phone):
             " (" +
             phone[len(country_code):len(country_code) + 3] +
             ") " +
-            phone[len((country_code) + 3):(len(country_code) + 6)] +
+            phone[(len(country_code) + 3):(len(country_code) + 6)] +
             "-" + phone[(len(country_code) + 6):(len(country_code) + 8)] +
             "-" +
             phone[len(country_code) + 8:]
