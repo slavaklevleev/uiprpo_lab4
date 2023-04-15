@@ -3,6 +3,7 @@ import re
 f = open("data.txt", "r")
 Lines = f.readlines()
 
+
 def check_age(age):
     try:
         age = int(age)
@@ -12,6 +13,7 @@ def check_age(age):
     except ValueError:
         return '-'
     
+
 def check_phone(phone):
     # убираем все символы, кроме цифр
     phone = re.sub(r'\D', '', phone)
@@ -20,7 +22,17 @@ def check_phone(phone):
     if (len(phone) - len(country_code)) != 10:
         return '-'
     # форматируем номер телефона
-    return '+' + country_code + ' (' + phone[len(country_code):len(country_code) + 3] + ') ' + phone[len(country_code) + 3:len(country_code) + 6] + '-' + phone[len(country_code) + 6:len(country_code) + 8] + '-' + phone[len(country_code) + 8:]
+    return ("+" +
+            country_code +
+            " (" +
+            phone[len(country_code):len(country_code) + 3] +
+            ") " +
+            phone[len((country_code) + 3):(len(country_code) + 6)] +
+            "-" + phone[(len(country_code) + 6):(len(country_code) + 8)] +
+            "-" +
+            phone[len(country_code) + 8:]
+            )
+
 
 def check_email(email):
     email = email.replace(' ', '').replace('..', '.')
@@ -51,7 +63,6 @@ with open('output.txt', 'w') as f_out:
             if idx == 3:
                 newString.append(check_email(elem))
 
-    
         f_out.write('|'.join(newString) + '\n')
 
 
